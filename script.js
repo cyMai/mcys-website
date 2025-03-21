@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Professional Experience',
                 kingdee: {
                     company: 'Kingdee International Software Group',
-                    period: 'Feb 2025 - Jun 2025',
+                    period: 'Feb 2025 - May 2025',
                     position: 'ERP Implementation Intern',
                     point1: 'Assisted in implementing Kingdee Cloud Galaxy ERP system, including system configuration, user training, and deployment support',
                     point2: 'Managed initial data setup, module testing, and issue tracking to ensure smooth project progression',
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: '实习经历',
                 kingdee: {
                     company: '金蝶国际软件集团',
-                    period: '2025年2月 - 2025年6月',
+                    period: '2025年2月 - 2025年5月',
                     position: 'ERP实施实习生',
                     point1: '协助实施ERP系统（金蝶云银河），包括系统配置、用户培训和上线支持',
                     point2: '处理初始数据设置、模块测试和问题跟踪，以确保项目的顺利进行',
