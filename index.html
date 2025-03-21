@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Mai Cuiyao's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Mai Cuiyao</div>
+        <div class="nav-links">
+            <a href="#home" class="active" data-translate="nav.home">Home</a>
+            <a href="#education" data-translate="nav.education">Education</a>
+            <a href="#experience" data-translate="nav.experience">Experience</a>
+            <a href="#campus" data-translate="nav.campus">Campus</a>
+            <a href="#projects" data-translate="nav.projects">Projects</a>
+        </div>
+        <div class="nav-controls">
+            <div class="theme-selector">
+                <div class="color-option" data-theme="default" style="background: linear-gradient(135deg, #1a2b45 0%, #2a3f5f 100%)" title="Default Theme"></div>
+                <div class="color-option" data-theme="green" style="background: linear-gradient(135deg, #004d40 0%, #00695c 100%)" title="Green Theme"></div>
+                <div class="color-option" data-theme="pink" style="background: linear-gradient(135deg, #ad1457 0%, #c2185b 100%)" title="Pink Theme"></div>
+                <div class="color-option" data-theme="minimal" style="background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)" title="Minimal Theme"></div>
+            </div>
+            <button id="langToggle" class="lang-toggle">中文</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <div class="profile">
+                    <h1 data-translate="name">Mai Cuiyao</h1>
+                    <p data-translate="major">Computer Science and Technology | Zhoukou Normal University</p>
+                    <div class="contact-info">
+                        <p>📞 (086)18218616100</p>
+                        <p>📧 1056926663@qq.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 data-translate="education.title">Education</h2>
+                <div class="education-card">
+                    <h3 data-translate="education.university">Zhoukou Normal University</h3>
+                    <p data-translate="education.major">Computer Science and Technology</p>
+                    <p data-translate="education.period">September 2021 - July 2025</p>
+                    <p data-translate="education.score">Average Score: 86.6/100</p>
+                    <p data-translate="education.gpa">GPA: 3.18/4.0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 data-translate="experience.title">Professional Experience</h2>
+                
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="image-container">
+                            <img src="pic/sx1.jpg" alt="Kingdee Internship" class="experience-image">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <h3 data-translate="experience.kingdee.company">Kingdee International Software Group</h3>
+                        <div class="timeline-date" data-translate="experience.kingdee.period">Feb 2025 - Jun 2025</div>
+                        <h4 data-translate="experience.kingdee.position">ERP Implementation Intern</h4>
+                        <ul>
+                            <li data-translate="experience.kingdee.point1">Assisted in implementing Kingdee Cloud Galaxy ERP system, including system configuration, user training, and deployment support</li>
+                            <li data-translate="experience.kingdee.point2">Managed initial data setup, module testing, and issue tracking to ensure smooth project progression</li>
+                            <li data-translate="experience.kingdee.point3">Optimized production reporting process, improving operational efficiency by 20% post-launch</li>
+                            <li data-translate="experience.kingdee.point4">Developed project documentation including user manuals and training materials</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <img src="pic/sx2.jpg" alt="Chengda Internship" class="experience-image">
+                        <h3 data-translate="experience.chengda.company">Zhaoqing Chengda Automation Technology Co., Ltd</h3>
+                        <div class="timeline-date" data-translate="experience.chengda.period">Sep 2024 - Dec 2024</div>
+                        <h4 data-translate="experience.chengda.position">Industrial IoT Development Intern</h4>
+                        <ul>
+                            <li data-translate="experience.chengda.point1">Developed energy monitoring system using .NET and C#, designed and implemented cloud data collection module</li>
+                            <li data-translate="experience.chengda.point2">Integrated 20+ industrial sensor devices via Modbus protocol, processing ~120,000 energy consumption records daily</li>
+                            <li data-translate="experience.chengda.point3">Led development of energy visualization dashboard showing real-time consumption trends for electricity, coal, and natural gas</li>
+                            <li data-translate="experience.chengda.point4">Achieved 8% reduction in inefficient energy consumption for clients after system implementation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="campus" class="section">
+            <div class="container">
+                <h2 data-translate="campus.title">Campus Experience</h2>
+                <div class="campus-grid">
+                    <div class="campus-item">
+                        <div class="campus-content">
+                            <h3 data-translate="campus.innovation.title">Innovation & Entrepreneurship Team</h3>
+                            <div class="timeline-date" data-translate="campus.innovation.period">Oct 2021 - Aug 2024</div>
+                            <h4 data-translate="campus.innovation.position">Team Leader</h4>
+                            <ul>
+                                <li data-translate="campus.innovation.point1">Led a 50-member team in developing 17 innovative projects</li>
+                                <li data-translate="campus.innovation.point2">Coordinated cross-functional collaboration</li>
+                                <li data-translate="campus.innovation.point3">Achieved 81 awards during leadership tenure</li>
+                            </ul>
+                        </div>
+                        <div class="campus-images">
+                            <div class="image-wrapper primary">
+                                <img src="pic/cxcy1.jpg" alt="Innovation Team Primary" class="campus-image">
+                            </div>
+                            <div class="image-wrapper secondary">
+                                <img src="pic/cxcy2.jpg" alt="Innovation Team Secondary" class="campus-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="campus-item reversed">
+                        <div class="campus-content">
+                            <h3 data-translate="campus.rural.title">Rural IoT Initiative</h3>
+                            <div class="timeline-date" data-translate="campus.rural.period">Jul 2023 - Oct 2023</div>
+                            <h4 data-translate="campus.rural.position">Project Leader</h4>
+                            <ul>
+                                <li data-translate="campus.rural.point1">Led IoT agricultural monitoring system deployment</li>
+                                <li data-translate="campus.rural.point2">Installed 23 sensor nodes</li>
+                                <li data-translate="campus.rural.point3">Featured on multiple media platforms</li>
+                            </ul>
+                        </div>
+                        <div class="campus-images">
+                            <div class="image-wrapper primary">
+                                <img src="pic/xczx1.jpg" alt="Rural IoT Primary" class="campus-image">
+                            </div>
+                            <div class="image-wrapper secondary">
+                                <img src="pic/xczx2.jpg" alt="Rural IoT Secondary" class="campus-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 data-translate="projects.title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-category">
+                        <h3 data-translate="projects.industrial.title">Industrial Detection & Safety Monitoring</h3>
+                        <div class="project-list">
+                            <!-- 后续添加具体项目 -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-category">
+                        <h3 data-translate="projects.vision.title">Computer Vision</h3>
+                        <div class="project-list">
+                            <!-- 后续添加具体项目 -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-category">
+                        <h3 data-translate="projects.agriculture.title">Smart Agriculture & IoT</h3>
+                        <div class="project-list">
+                            <!-- 后续添加具体项目 -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-category">
+                        <h3 data-translate="projects.virtual.title">Virtual Interaction & Entertainment</h3>
+                        <div class="project-list">
+                            <!-- 后续添加具体项目 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
