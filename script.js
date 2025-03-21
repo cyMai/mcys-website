@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Campus Experience',
                 innovation: {
                     title: 'Innovation & Entrepreneurship Team',
-                    period: 'Oct 2021 - Aug 2024',
+                    period: 'Mar 2022 - Aug 2024',
                     position: 'Team Leader',
                     point1: 'Led a 50-member team in developing 17 innovative projects aligned with university strategy and market needs',
                     point2: 'Coordinated cross-functional collaboration between technical, R&D, financial, and legal departments',
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: '校园经历',
                 innovation: {
                     title: '创新创业团队',
-                    period: '2021年10月 - 2024年8月',
+                    period: '2022年3月 - 2024年8月',
                     position: '团队负责人',
                     point1: '带领50人团队开发17个创新项目，符合学校发展战略和市场需求',
                     point2: '协调技术、研发、财务和法律部门之间的跨职能协作',
