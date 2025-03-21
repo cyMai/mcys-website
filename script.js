@@ -98,7 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 virtual: {
                     title: 'Virtual Interaction & Entertainment'
                 }
-            }
+            },
+            tech: {
+                title: 'Technical Skills',
+                languages: 'Programming Languages',
+                frameworks: 'Frameworks & Tools',
+                other: 'Other Skills'
+            },
+            greeting: 'Hello, I am Cuiyao Mai',
+            intro: 'AI + Digital Media Full-stack Developer, led a team to complete 17 innovative projects, winning 7 national awards and 30+ provincial awards. Committed to driving industrial transformation through intelligent technology and exploring interdisciplinary innovative applications.',
+            vision: 'I aim to empower more vibrant digital narratives with smarter algorithms.'
         },
         zh: {
             title: '麦萃窈的个人网站',
@@ -178,7 +187,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 virtual: {
                     title: '虚拟交互与娱乐应用'
                 }
-            }
+            },
+            tech: {
+                title: '技术栈',
+                languages: '编程语言',
+                frameworks: '框架与工具',
+                other: '其他技能'
+            },
+            greeting: '你好，我是麦萃窈',
+            intro: 'AI+数字媒体全栈开发者，带领团队完成17项创新项目，获7项国家级奖项，省级奖项30+项；致力以智能技术推动产业转型，探索跨学科创新应用。',
+            vision: '我想用更智慧的算法，赋能更具生命力的数字叙事。'
         }
     };
 
@@ -513,7 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="gallery-nav gallery-prev">‹</button>
                     <div class="gallery-container">
                         ${project.images.map(img => `
-                            <div class="gallery-item">
+                            <div class="gallery-item" onclick="showFullscreen('${img.src}', 'image')">
                                 <img src="${img.src}" alt="${img.alt}" loading="lazy">
                             </div>
                         `).join('')}
@@ -525,7 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="gallery-nav gallery-prev">‹</button>
                     <div class="gallery-container">
                         ${project.media.map(item => `
-                            <div class="gallery-item">
+                            <div class="gallery-item" onclick="showFullscreen('${item.src}', '${item.type}')">
                                 ${item.type === 'video' ? `
                                     <video controls preload="metadata">
                                         <source src="${item.src}" type="video/mp4">
@@ -569,5 +587,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         modal.classList.add('active');
+    }
+
+    // 添加全屏展示功能
+    function showFullscreen(src, type) {
+        const fullscreenModal = document.createElement('div');
+        fullscreenModal.className = 'fullscreen-modal';
+        
+        const content = type === 'video' ? `
+            <video controls autoplay class="fullscreen-content">
+                <source src="${src}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        ` : `
+            <img src="${src}" class="fullscreen-content" alt="Fullscreen view">
+        `;
+        
+        fullscreenModal.innerHTML = `
+            <div class="fullscreen-close">×</div>
+            ${content}
+        `;
+        
+        document.body.appendChild(fullscreenModal);
+        
+        // 添加关闭功能
+        fullscreenModal.addEventListener('click', (e) => {
+            if (e.target === fullscreenModal || e.target.className === 'fullscreen-close') {
+                fullscreenModal.remove();
+            }
+        });
+        
+        // ESC键关闭
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                fullscreenModal.remove();
+            }
+        });
     }
 }); 

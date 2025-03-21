@@ -31,12 +31,37 @@
     <main>
         <section id="home" class="section">
             <div class="container">
-                <div class="profile">
-                    <h1 data-translate="name">Mai Cuiyao</h1>
-                    <p data-translate="major">Computer Science and Technology | Zhoukou Normal University</p>
-                    <div class="contact-info">
-                        <p>📞 (086)18218616100</p>
-                        <p>📧 1056926663@qq.com</p>
+                <div class="home-content">
+                    <div class="profile-info">
+                        <h1 class="greeting" data-translate="greeting">Hello, I am Cuiyao Mai</h1>
+                        <p class="intro" data-translate="intro">AI + Digital Media Full-stack Developer, led a team to complete 17 innovative projects, winning 7 national awards and 30+ provincial awards. Committed to driving industrial transformation through intelligent technology and exploring interdisciplinary innovative applications.</p>
+                        <div class="tech-stack">
+                            <h3 data-translate="tech.title">Technical Skills</h3>
+                            <div class="tech-items">
+                                <span>Python</span>
+                                <span>Java</span>
+                                <span>C#</span>
+                                <span>C++</span>
+                                <span>OpenCV</span>
+                                <span>MySQL</span>
+                                <span>PyTorch</span>
+                                <span>.NET</span>
+                                <span>Git</span>
+                                <span>Linux</span>
+                                <span>PHP</span>
+                                <span>STM32</span>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <p>📞 (086)18218616100</p>
+                            <p>📧 1056926663@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="profile-right">
+                        <div class="profile-image">
+                            <img src="pic/zjz.jpg" alt="Mai Cuiyao" class="avatar">
+                        </div>
+                        <p class="vision" data-translate="vision">I aim to empower more vibrant digital narratives with smarter algorithms.</p>
                     </div>
                 </div>
             </div>
@@ -45,12 +70,19 @@
         <section id="education" class="section">
             <div class="container">
                 <h2 data-translate="education.title">Education</h2>
-                <div class="education-card">
-                    <h3 data-translate="education.university">Zhoukou Normal University</h3>
-                    <p data-translate="education.major">Computer Science and Technology</p>
-                    <p data-translate="education.period">September 2021 - July 2025</p>
-                    <p data-translate="education.score">Average Score: 86.6/100</p>
-                    <p data-translate="education.gpa">GPA: 3.18/4.0</p>
+                <div class="education-content">
+                    <div class="education-info">
+                        <div class="education-card">
+                            <h3 data-translate="education.university">Zhoukou Normal University</h3>
+                            <p data-translate="education.major">Computer Science and Technology</p>
+                            <p data-translate="education.period">September 2021 - July 2025</p>
+                            <p data-translate="education.score">Average Score: 86.6/100</p>
+                            <p data-translate="education.gpa">GPA: 3.18/4.0</p>
+                        </div>
+                    </div>
+                    <div class="education-image">
+                        <img src="pic/jxj.jpg" alt="Scholarship Certificate" class="scholarship-img">
+                    </div>
                 </div>
             </div>
         </section>
@@ -178,5 +210,39 @@
     </main>
 
     <script src="script.js"></script>
+    <script>
+        // 监听页面滚动，更新导航栏活跃状态
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 平滑滚动到对应部分
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
